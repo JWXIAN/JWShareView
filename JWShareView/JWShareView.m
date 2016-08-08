@@ -106,7 +106,7 @@
     canleBtn.titleLabel.font = [UIFont systemFontOfSize:16];
     [canleBtn setBackgroundColor:[UIColor whiteColor]];
     [canleBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [canleBtn addTarget:self action:@selector(tapBg) forControlEvents:UIControlEventTouchUpInside];
+    [canleBtn addTarget:self action:@selector(cancleButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:canleBtn];
     
     self.btnBlock = ^(NSInteger tag, NSString *title){
@@ -131,12 +131,11 @@
     _backgroundView.backgroundColor = [UIColor blackColor];
     _backgroundView.alpha = 0.4;
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBg)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancleButtonAction)];
     [_backgroundView addGestureRecognizer:tap];
     [superView addSubview:_backgroundView];
 }
-
-- (void)tapBg{
+- (void)cancleButtonAction{
     [_backgroundView removeFromSuperview];
     _backgroundView = nil;
     [UIView animateWithDuration:0.25 animations:^{
@@ -146,10 +145,6 @@
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
-}
-
-- (void)cancleButtonAction{
-    
 }
 - (void)btnClick:(UIButton *)sender{
     if(_btnBlock) _btnBlock(sender.tag, sender.titleLabel.text);

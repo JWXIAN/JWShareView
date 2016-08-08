@@ -17,6 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UILabel *lab = [[UILabel alloc] initWithFrame:self.view.bounds];
+    lab.textAlignment = NSTextAlignmentCenter;
+    lab.text = @"点我";
+    [self.view addSubview:lab];
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     NSArray *contentArray = @[@{@"name":@"新浪微博",@"icon":@"sns_icon_3"},
                               @{@"name":@"QQ空间 ",@"icon":@"sns_icon_5"},
                               @{@"name":@"QQ",@"icon":@"sns_icon_4"},
@@ -28,7 +34,6 @@
         NSLog(@"%ld --- %@", tag, title);
     }];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
