@@ -82,7 +82,7 @@
         CGFloat marginX = (self.frame.size.width - kShareItemNum * kBtnW) / (kShareItemNum + 1);
         NSInteger col = idx % kShareItemNum;
         NSInteger row = idx / kShareItemNum;
-        CGFloat btnX = kMarginX + (marginX + kBtnW) * col;
+        CGFloat btnX = marginX + (marginX + kBtnW) * col;
         CGFloat btnY = kFirst + (kMarginY + kBtnH) * row;
         btn.frame = CGRectMake(btnX, btnY, kBtnW, kBtnH);
         [self addSubview:btn];
