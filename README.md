@@ -6,7 +6,7 @@
 [![Bintray](https://img.shields.io/badge/version-1.0-brightgreen.svg)](https://github.com/JWXIAN/MVCProject)
 
 --
-![image](https://github.com/JWXIAN/JWShareView/blob/master/ShareViewDemo/pic.png)
+![image](https://github.com/JWXIAN/JWShareView/blob/master/ShareViewDemo/ss.png)
 --
 
      NSArray *contentArray = @[@{@"name":@"新浪微博",@"icon":@"sns_icon_3"},
