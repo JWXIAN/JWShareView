@@ -38,7 +38,6 @@
     }
     return self;
 }
-
 #pragma mark 调整文字的位置和尺寸
 - (CGRect)titleRectForContentRect:(CGRect)contentRect{
     CGFloat titleW = self.frame.size.width;
@@ -47,7 +46,6 @@
     CGFloat titleY = self.frame.size.height * (1 - kTitlePrecent) + 7;
     return CGRectMake(titleX, titleY, titleW, titleH);
 }
-
 #pragma mark 调整图片的位置和尺寸
 - (CGRect)imageRectForContentRect:(CGRect)contentRect{
     CGFloat imageW = kImageViewWH;

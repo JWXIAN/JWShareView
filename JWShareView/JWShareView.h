@@ -21,5 +21,12 @@ typedef void (^selectItemBlock)(NSInteger tag, NSString *title);
 @end
 
 @interface JWShareView : UIView
+/**
+ *  弹出分享
+ *
+ *  @param superView       父视图
+ *  @param shareItems      QQ/WeChat/Weibo
+ *  @param selectShareItem 点击回调
+ */
 - (void)addShareItems:(UIView *)superView  shareItems:(NSArray *)shareItems selectShareItem:(selectItemBlock)selectShareItem;
 @end
