@@ -123,7 +123,6 @@
     frame.origin.x = 0;
     [super setFrame:frame];
 }
-
 - (void)addBackgroundView:(UIView *)superView{
     _backgroundView = [[UIView alloc] initWithFrame:superView.bounds];
     _backgroundView.backgroundColor = [UIColor blackColor];
@@ -146,22 +145,5 @@
 }
 - (void)btnClick:(UIButton *)sender{
     if(_btnBlock) _btnBlock(sender.tag, sender.titleLabel.text);
-}
-//颜色生成图片方法
-- (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
-    CGRect rect = CGRectMake(0, 0, size.width, size.height);
-    
-    UIGraphicsBeginImageContext(rect.size);
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetFillColorWithColor(context,
-                                   
-                                   color.CGColor);
-    CGContextFillRect(context, rect);
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return img;
 }
 @end
